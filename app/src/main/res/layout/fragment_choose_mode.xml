@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Fragments.ChooseModeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_pick"
+        android:text="Pick"
+        android:textSize="50sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@color/black"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/fruit"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="95dp"
+            android:src="@drawable/vegss"/>
+
+
+
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio_group"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/fruitButton"
+            android:text="Find Fruits"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_width="180dp"
+            android:layout_height="80dp"/>
+
+        <RadioButton
+            android:id="@+id/vegButton"
+            android:layout_marginStart="7dp"
+            android:text="Find Vegetables"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_width="180dp"
+            android:layout_height="80dp"/>
+        
+        
+    </RadioGroup>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:id="@+id/button_start"
+        android:text="Start"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        />
+
+
+</LinearLayout>

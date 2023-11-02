@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/fruitFragment"
+        android:name="com.example.fruitvegetablegame.Fragments.FruitFragment"
+        android:label="Fruit List"
+        tools:layout="@layout/fragment_fruit" >
+        <action
+            android:id="@+id/action_fruitFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vegFragment"
+        android:name="com.example.fruitvegetablegame.Fragments.VegFragment"
+        android:label="Vegetable List"
+        tools:layout="@layout/fragment_veg" >
+        <action
+            android:id="@+id/action_vegFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.fruitvegetablegame.Fragments.MainFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_fruitFragment"
+            app:destination="@id/fruitFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_vegFragment"
+            app:destination="@id/vegFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseModeFragment"
+            app:destination="@id/chooseModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseModeFragment"
+        android:name="com.example.fruitvegetablegame.Fragments.ChooseModeFragment"
+        android:label="fragment_choose_mode"
+        tools:layout="@layout/fragment_choose_mode" >
+        <action
+            android:id="@+id/action_chooseModeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_chooseModeFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.fruitvegetablegame.Fragments.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="mode"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameFragment_to_chooseModeFragment"
+            app:destination="@id/chooseModeFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

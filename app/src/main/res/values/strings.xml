@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fruit&amp;Vegetable Game</string>
+    <string name="look_at_fruits">Look at Fruits</string>
+    <string name="look_at_vegetables">Look at Vegetables</string>
+    <string name="play_game">Play Game</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
